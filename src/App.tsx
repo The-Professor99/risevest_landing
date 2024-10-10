@@ -4,9 +4,10 @@ import Partners from "components/partners";
 import FeaturedSection from "components/featured/featured-section";
 import Products from "components/products/products";
 import Banner from "components/banner/banner";
+import Regulation from "components/regulation";
+import TestimonialCards from "components/testimonials/testimonial-cards";
 
 import "./App.scss";
-import Regulation from "components/regulation";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Products />
         <Banner />
         <Regulation />
+        <TestimonialCards />
       </main>
     </>
   );
