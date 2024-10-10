@@ -6,6 +6,7 @@ import Products from "components/products/products";
 import Banner from "components/banner/banner";
 import Regulation from "components/regulation";
 import TestimonialCards from "components/testimonials/testimonial-cards";
+import Community from "components/community/community";
 
 import "./App.scss";
 
@@ -21,6 +22,7 @@ function App() {
         <Banner />
         <Regulation />
         <TestimonialCards />
+        <Community />
       </main>
     </>
   );
