@@ -7,6 +7,7 @@ import Banner from "components/banner/banner";
 import Regulation from "components/regulation";
 import TestimonialCards from "components/testimonials/testimonial-cards";
 import Community from "components/community/community";
+import DownloadApp from "components/download-app";
 
 import "./App.scss";
 
@@ -23,6 +24,7 @@ function App() {
         <Regulation />
         <TestimonialCards />
         <Community />
+        <DownloadApp />
       </main>
     </>
   );
