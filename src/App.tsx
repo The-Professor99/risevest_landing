@@ -1,7 +1,8 @@
 import Navbar from "components/layout/header";
 import Hero from "components/hero";
-import "./App.scss";
 import Partners from "components/partners";
+import FeaturedSection from "components/featured/featured_section";
+import "./App.scss";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main>
         <Hero />
         <Partners />
+        <FeaturedSection />
       </main>
     </>
   );
