@@ -6,6 +6,7 @@ import Products from "components/products/products";
 import Banner from "components/banner/banner";
 
 import "./App.scss";
+import Regulation from "components/regulation";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <FeaturedSection />
         <Products />
         <Banner />
+        <Regulation />
       </main>
     </>
   );
