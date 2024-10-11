@@ -1,6 +1,8 @@
 import risevestLogo from "assets/logo_dark.svg";
 import FooterMenu from "./footer-menu";
 import type { FooterMenuItems } from "lib/definitions";
+import Container from "components/atoms/Container";
+import Typography from "components/atoms/Typography";
 
 export default function Footer() {
   const mainFooterItems: FooterMenuItems = [
@@ -42,14 +44,43 @@ export default function Footer() {
   ];
 
   return (
-    <footer>
-      <FooterMenu
-        menuItems={mainFooterItems}
-        menuTitle={<img src={risevestLogo} alt="Risevest logo" />}
-      />
-      <FooterMenu menuItems={exploreItems} menuTitle={<p>Explore</p>} />
-      <FooterMenu menuItems={productItems} menuTitle={<p>Products</p>} />
-      <FooterMenu menuItems={contactItems} menuTitle={<p>Contact Us</p>} />
-    </footer>
+    <Container>
+      <footer>
+        <div className="flex justify-between mt-lg">
+          <FooterMenu
+            menuItems={mainFooterItems}
+            menuTitle={
+              <img src={risevestLogo} alt="Risevest logo" className="mb-lg" />
+            }
+          />
+          <FooterMenu
+            menuItems={exploreItems}
+            menuTitle={
+              <Typography variant="h3" weight="bold" className="mb-lg">
+                Explore
+              </Typography>
+            }
+          />
+        </div>
+        <div className="flex justify-between mt-lg">
+          <FooterMenu
+            menuItems={productItems}
+            menuTitle={
+              <Typography variant="h3" weight="bold" className="mb-lg">
+                Products
+              </Typography>
+            }
+          />
+          <FooterMenu
+            menuItems={contactItems}
+            menuTitle={
+              <Typography variant="h3" weight="bold" className="mb-lg">
+                Contact Us
+              </Typography>
+            }
+          />
+        </div>
+      </footer>
+    </Container>
   );
 }

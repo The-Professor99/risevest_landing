@@ -14,7 +14,11 @@ export default function FooterMenu({ menuTitle, menuItems }: FooterMenuProps) {
         <ul>
           {menuItems.map((item) => (
             <li key={item.id}>
-              <Button href={item.link} target={item.target}>
+              <Button
+                href={item.link}
+                target={item.target}
+                className="p-none my-sm"
+              >
                 {item.name}
               </Button>
             </li>
