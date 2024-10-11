@@ -22,7 +22,15 @@
     font-weight: 400;
   }
 
+  &.semi-bold {
+    font-weight: 500;
+  }
+
   &.bold {
+    font-weight: 600;
+  }
+
+  &.bolder {
     font-weight: 700;
   }
 
@@ -39,6 +47,19 @@ h4 {
     font-family: "Work Sans", sans-serif;
     &.default {
       color: var(--default-dark);
+    }
+  }
+}
+
+strong {
+  &.typography {
+    span {
+      &.default {
+        color: var(--default-light);
+      }
+    }
+    em {
+      font-style: normal;
     }
   }
 }

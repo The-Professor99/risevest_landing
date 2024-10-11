@@ -1,0 +1,12 @@
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  &.rounded {
+    border-radius: 8px;
+  }
+  &.rounded-full {
+    border-radius: 50%;
+  }
+}

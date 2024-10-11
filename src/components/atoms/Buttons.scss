@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &.primary {
+    color: var(--primary-main);
+    &:hover {
+      background-color: var(--primary-dark);
+    }
+  }
+  &.medium {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
