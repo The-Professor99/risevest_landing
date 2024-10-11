@@ -1,6 +1,9 @@
+import Button from "components/atoms/Buttons";
+import type { FooterMenuItems } from "lib/definitions";
+
 interface FooterMenuProps {
-  menuTitle: JSX.Element;
-  menuItems: { id: number; link: string; name: string }[];
+  menuTitle: React.ReactNode;
+  menuItems: FooterMenuItems;
 }
 
 export default function FooterMenu({ menuTitle, menuItems }: FooterMenuProps) {
@@ -11,7 +14,9 @@ export default function FooterMenu({ menuTitle, menuItems }: FooterMenuProps) {
         <ul>
           {menuItems.map((item) => (
             <li key={item.id}>
-              <a href={item.link}>{item.name}</a>
+              <Button href={item.link} target={item.target}>
+                {item.name}
+              </Button>
             </li>
           ))}
         </ul>
