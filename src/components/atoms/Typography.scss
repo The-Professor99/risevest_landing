@@ -1,0 +1,44 @@
+.typography {
+  margin: 0;
+  font-family: inherit;
+
+  &.small {
+    font-size: 0.875rem;
+  }
+
+  &.medium {
+    font-size: 1rem;
+  }
+
+  &.large {
+    font-size: 1.25rem;
+  }
+
+  &.light {
+    font-weight: 300;
+  }
+
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.default {
+    color: var(--default-main);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  &.typography {
+    font-family: "Work Sans", sans-serif;
+    &.default {
+      color: var(--default-dark);
+    }
+  }
+}
