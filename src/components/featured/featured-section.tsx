@@ -4,6 +4,7 @@ import featured3 from "assets/featured_section/featured_3.png";
 import featured4 from "assets/featured_section/featured_4.png";
 import React from "react";
 import FeaturedCard from "./featured-card";
+import Container from "components/atoms/Container";
 
 export default function FeaturedSection() {
   const featured = [
@@ -52,19 +53,21 @@ export default function FeaturedSection() {
   ];
 
   return (
-    <section>
-      {featured.map((feature) => (
-        <React.Fragment key={feature.id}>
-          <FeaturedCard
-            title={feature.title}
-            description={feature.description}
-            buttonLink={feature.buttonLink}
-            buttonText={feature.buttonText}
-            imgAlt={feature.imgAlt}
-            imgSrc={feature.imgSrc}
-          />
-        </React.Fragment>
-      ))}
-    </section>
+    <Container maxWidth="md" padding="sm" centerContent>
+      <section>
+        {featured.map((feature) => (
+          <React.Fragment key={feature.id}>
+            <FeaturedCard
+              title={feature.title}
+              description={feature.description}
+              buttonLink={feature.buttonLink}
+              buttonText={feature.buttonText}
+              imgAlt={feature.imgAlt}
+              imgSrc={feature.imgSrc}
+            />
+          </React.Fragment>
+        ))}
+      </section>
+    </Container>
   );
 }
