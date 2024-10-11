@@ -18,7 +18,7 @@ const Container = ({
 }: ContainerProps) => {
   return (
     <div
-      className={`container ${maxWidth} ${padding} ${
+      className={`container ${maxWidth} p-${padding} ${
         centerContent ? "center" : ""
       } ${className}`}
     >
