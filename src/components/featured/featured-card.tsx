@@ -26,7 +26,7 @@ export default function FeaturedCard({
         <Image src={imgSrc} alt={imgAlt} width={280} height={270} />
       </div>
       <div className="text--container">
-        <Typography variant="h2" weight="bold">
+        <Typography variant="h2" weight="bolder">
           {title}
         </Typography>
         <Typography variant="p">{description}</Typography>

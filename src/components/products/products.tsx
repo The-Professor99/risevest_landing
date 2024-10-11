@@ -3,6 +3,9 @@ import realEstate from "assets/products/real_estate.png";
 import fixedIncome from "assets/products/fixed_income.png";
 import React from "react";
 import ProductCard from "./product-card";
+import Typography from "components/atoms/Typography";
+import Container from "components/atoms/Container";
+import "./products.scss";
 
 export default function Products() {
   const products = [
@@ -17,6 +20,7 @@ export default function Products() {
       imgAlt: "Stocks Visualization",
       historicalReturns: "14% per annum",
       riskLevel: "Medium",
+      decorationColor: "#FFF4F0",
     },
     {
       id: 2,
@@ -29,6 +33,7 @@ export default function Products() {
       imgAlt: "Real Estate visualization",
       historicalReturns: "14% per annum",
       riskLevel: "Medium",
+      decorationColor: "#F6F2FF",
     },
     {
       id: 3,
@@ -41,31 +46,39 @@ export default function Products() {
       imgAlt: "Fixed Income visualization",
       historicalReturns: "14% per annum",
       riskLevel: "Medium",
+      decorationColor: "#ECFEFE",
     },
   ];
   return (
-    <section>
-      <div>
-        <h2>Asset Classes</h2>
-        <p>It’s your money, choose where you invest it</p>
-      </div>
+    <Container padding="lg" centerContent>
+      <section className="center">
+        <div>
+          <Typography variant="h2" size="large" weight="bold">
+            Asset Classes
+          </Typography>
+          <Typography weight="semi-bold">
+            It’s your money, choose where you invest it
+          </Typography>
+        </div>
 
-      <div>
-        {products.map((product) => (
-          <React.Fragment key={product.id}>
-            <ProductCard
-              title={product.title}
-              description={product.description}
-              buttonLink={product.buttonLink}
-              buttonText={product.buttonText}
-              imgAlt={product.imgAlt}
-              imgSrc={product.imgSrc}
-              historicalReturns={product.historicalReturns}
-              riskLevel={product.riskLevel}
-            />
-          </React.Fragment>
-        ))}
-      </div>
-    </section>
+        <div className="products--container">
+          {products.map((product) => (
+            <React.Fragment key={product.id}>
+              <ProductCard
+                title={product.title}
+                description={product.description}
+                buttonLink={product.buttonLink}
+                buttonText={product.buttonText}
+                imgAlt={product.imgAlt}
+                imgSrc={product.imgSrc}
+                historicalReturns={product.historicalReturns}
+                riskLevel={product.riskLevel}
+                decorationColor={product.decorationColor}
+              />
+            </React.Fragment>
+          ))}
+        </div>
+      </section>
+    </Container>
   );
 }
