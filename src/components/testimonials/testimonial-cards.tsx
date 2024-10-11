@@ -15,7 +15,7 @@ export default function TestimonialCards() {
     },
 
     {
-      id: 1,
+      id: 2,
       name: "Lade",
       tag: "UX Researcher",
       testimonial:
@@ -25,7 +25,7 @@ export default function TestimonialCards() {
     },
 
     {
-      id: 1,
+      id: 3,
       name: "Lade",
       tag: "UX Researcher",
       testimonial:
@@ -35,7 +35,7 @@ export default function TestimonialCards() {
     },
 
     {
-      id: 1,
+      id: 4,
       name: "Lade",
       tag: "UX Researcher",
       testimonial:

@@ -37,6 +37,9 @@
   &.default {
     color: var(--default-main);
   }
+  &.primary {
+    color: var(--primary-main);
+  }
 }
 
 h1,
@@ -58,8 +61,11 @@ strong {
         color: var(--default-light);
       }
     }
-    em {
-      font-style: normal;
-    }
+  }
+}
+
+em {
+  &.typography {
+    font-style: normal;
   }
 }

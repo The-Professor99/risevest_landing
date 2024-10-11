@@ -1,3 +1,109 @@
 .center {
   text-align: center;
 }
+
+.flex {
+  display: flex;
+  &.flex-col {
+    flex-direction: column;
+  }
+  &.align-center {
+    align-items: center;
+  }
+}
+// Heights
+.h-2 {
+  height: 0.5rem;
+}
+.h-8 {
+  height: 2rem;
+}
+.h-full {
+  height: 100%;
+}
+
+// Widths
+.w-2 {
+  width: 0.5rem;
+}
+.w-8 {
+  width: 2rem;
+}
+.w-full {
+  width: 100%;
+}
+
+// paddings
+.p-none {
+  padding: 0;
+}
+
+.p-sm {
+  padding: 0.5rem;
+}
+
+.pt-sm {
+  padding-block-start: 0.5rem;
+}
+.pb-sm {
+  padding-block-end: 0.5rem;
+}
+
+.p-md {
+  padding: 1rem;
+}
+
+.pt-md {
+  padding-block-start: 1rem;
+}
+
+.pb-md {
+  padding-block-end: 1rem;
+}
+
+.p-lg {
+  padding: 2rem;
+}
+
+// Margins
+
+.m-none {
+  margin: 0;
+}
+
+.m-sm {
+  margin: 0.5rem;
+}
+
+.mt-sm {
+  margin-block-start: 0.5rem;
+}
+.mb-sm {
+  margin-block-end: 0.5rem;
+}
+.my-sm {
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+.m-md {
+  margin: 1rem;
+}
+.my-md {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+.m-lg {
+  margin: 2rem;
+}
+
+// Borders
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+// Images
+.object-cover {
+  object-fit: cover;
+}
