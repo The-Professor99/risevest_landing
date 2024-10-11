@@ -10,6 +10,9 @@
   &.align-center {
     align-items: center;
   }
+  &.justify-around {
+    justify-content: space-around;
+  }
 }
 // Heights
 .h-2 {
@@ -17,6 +20,9 @@
 }
 .h-8 {
   height: 2rem;
+}
+.h-20 {
+  height: 5rem;
 }
 .h-full {
   height: 100%;
@@ -28,6 +34,9 @@
 }
 .w-8 {
   width: 2rem;
+}
+.w-20 {
+  width: 5rem;
 }
 .w-full {
   width: 100%;
@@ -81,6 +90,27 @@
 .mb-sm {
   margin-block-end: 0.5rem;
 }
+
+.ml-sm {
+  margin-inline-start: 0.5rem;
+}
+.mr-sm {
+  margin-inline-end: 0.5rem;
+}
+.mt-md {
+  margin-block-start: 1rem;
+}
+
+.mb-md {
+  margin-block-end: 1rem;
+}
+
+.ml-md {
+  margin-inline-start: 1rem;
+}
+.mr-md {
+  margin-inline-end: 1rem;
+}
 .my-sm {
   margin-block-start: 0.5rem;
   margin-block-end: 0.5rem;
@@ -96,6 +126,13 @@
 
 .m-lg {
   margin: 2rem;
+}
+
+.mt-lg {
+  margin-block-start: 2rem;
+}
+.mb-lg {
+  margin-block-end: 2rem;
 }
 
 // Borders

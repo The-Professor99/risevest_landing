@@ -8,6 +8,7 @@ interface ButtonProps {
   href?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
   disabled?: boolean;
+  className?: string;
 }
 
 const Button = ({
@@ -18,8 +19,9 @@ const Button = ({
   href,
   target = "_self",
   disabled = false,
+  className = "",
 }: ButtonProps) => {
-  const classes = `button ${variant} ${size}`;
+  const classes = `button ${variant} ${size}  ${className}`;
 
   if (href) {
     return (
