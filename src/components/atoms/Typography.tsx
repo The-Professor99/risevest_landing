@@ -2,7 +2,7 @@ import React from "react";
 import "./Typography.scss";
 
 interface TypographyProps {
-  variant?: "h1" | "h2" | "h3" | "h4" | "p" | "span";
+  variant?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "strong" | "em";
   size?: "small" | "medium" | "large";
   weight?: "light" | "regular" | "bold";
   color?: "primary" | "secondary" | "default";
