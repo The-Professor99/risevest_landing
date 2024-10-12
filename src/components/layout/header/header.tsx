@@ -14,7 +14,11 @@ const NavLink = ({
   closeMenu: () => void;
 }) => {
   return (
-    <Button href={buttonLink} onClick={closeMenu}>
+    <Button
+      href={buttonLink}
+      onClick={closeMenu}
+      className="navlink py-sm md-px-sm"
+    >
       {buttonText}
     </Button>
   );
@@ -49,7 +53,7 @@ const Navbar = () => {
         </div>
 
         <nav
-          className={`nav main-menu nav-links gap-3 ${
+          className={`nav main-menu nav-links gap-3 p-sm ${
             menuOpen ? "active" : ""
           }`}
         >
@@ -65,9 +69,14 @@ const Navbar = () => {
         </nav>
 
         <div className="menu-toggle">
-          <button className="modal-close  bars" onClick={toggleMenu}>
-            {menuOpen ? <>&times;</> : <>&#9776;</>}
-          </button>
+          <Button
+            className={`modal-close bars p-none ${menuOpen ? "active" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className="bar" />
+            <div className="bar" />
+            <div className="bar" />
+          </Button>
         </div>
       </header>
     </Container>

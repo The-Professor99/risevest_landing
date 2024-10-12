@@ -20,6 +20,11 @@
 }
 
 @media (max-width: 768px) {
+  .header-container {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+  }
   .nav-links {
     display: none;
     flex-direction: column;
@@ -27,7 +32,6 @@
     top: 4rem;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
     border-radius: 8px;
 
     left: 0%;
@@ -41,5 +45,53 @@
 
   .menu-toggle {
     display: block;
+  }
+  .header .bars {
+    display: flex;
+
+    height: 24px;
+    width: 24px;
+    position: relative;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    .bar {
+      height: 2px;
+      width: 100%;
+      border-radius: 25px;
+      -webkit-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      background-color: #007bff;
+    }
+    .bar:nth-child(even) {
+      margin: 5px 0;
+    }
+    &.active .bar:nth-child(1) {
+      -webkit-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-transform: translate(4px, 3px) rotate(45deg);
+      transform: translate(4px, 3px) rotate(45deg);
+    }
+
+    &.active .bar:nth-child(2) {
+      -webkit-transform-origin: top right;
+      transform-origin: top right;
+      -webkit-transform: translate(-5px, -10px) rotate(-45deg);
+      transform: translate(-5px, -10px) rotate(-45deg);
+    }
+    &.active .bar:nth-child(3) {
+      -webkit-transform-origin: bottom right;
+      transform-origin: bottom right;
+      -webkit-transform: translate(-6px, -4px) rotate(45deg);
+      transform: translate(-6px, -4px) rotate(45deg);
+    }
   }
 }

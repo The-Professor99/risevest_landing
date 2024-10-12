@@ -1,4 +1,3 @@
-import member1 from "assets/community/member1.jpg";
 import CommunityImages from "./community-image";
 import Typography from "components/atoms/Typography";
 import Button from "components/atoms/Buttons";
