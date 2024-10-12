@@ -27,7 +27,7 @@ export default function ProductCard({
   decorationColor,
 }: ProductCardProps) {
   return (
-    <article className="product--card">
+    <article className="product--card ">
       <div
         className="visual--decoration-block"
         style={{ backgroundColor: `${decorationColor}` }}
@@ -36,19 +36,19 @@ export default function ProductCard({
         <div className="image--container">
           <Image src={imgSrc} alt={imgAlt} className="rounded-full" />
         </div>
-        <div>
+        <div className="p-sm">
           <Typography
             variant="h3"
             weight="bold"
             size="large"
-            className="product--title"
+            className="product--title m-md"
           >
             {title}
           </Typography>
           <Typography
             variant="p"
             weight="light"
-            className="product--description"
+            className="product--description my-md"
           >
             {description}
           </Typography>
@@ -64,7 +64,9 @@ export default function ProductCard({
             </Typography>
           </div>
 
-          <Button href={buttonLink}>{buttonText}</Button>
+          <Button href={buttonLink} className="mt-12 mb-md">
+            {buttonText}
+          </Button>
         </div>
       </div>
     </article>

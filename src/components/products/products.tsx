@@ -50,18 +50,18 @@ export default function Products() {
     },
   ];
   return (
-    <Container padding="lg" centerContent>
-      <section className="center">
+    <Container padding="none" centerContent>
+      <section className="center w-full">
         <div>
           <Typography variant="h2" size="large" weight="bold">
             Asset Classes
           </Typography>
-          <Typography weight="semi-bold">
+          <Typography weight="semi-bold" className="mt-sm mb-md">
             It’s your money, choose where you invest it
           </Typography>
         </div>
 
-        <div className="products--container">
+        <div className="products--container flex flex-col gap-16 align-center md-align-stretch justify-center md-flex-row lg-justify-between">
           {products.map((product) => (
             <React.Fragment key={product.id}>
               <ProductCard
