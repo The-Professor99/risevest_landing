@@ -77,4 +77,16 @@
       left: -4rem;
     }
   }
+  @media (max-width: 768px) {
+    .hero--header {
+      &::after {
+        right: 0;
+      }
+    }
+    .phone--body {
+      &::after {
+        right: 0;
+      }
+    }
+  }
 }
