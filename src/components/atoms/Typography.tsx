@@ -5,7 +5,7 @@ interface TypographyProps {
   variant?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "strong" | "em";
   size?: "small" | "medium" | "large";
   weight?: "light" | "regular" | "semi-bold" | "bold" | "bolder";
-  color?: "primary" | "secondary" | "default";
+  color?: "primary" | "secondary" | "default" | "white";
   className?: string;
   children: React.ReactNode;
 }

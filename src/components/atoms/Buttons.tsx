@@ -2,7 +2,7 @@ import "./Buttons.scss";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "info" | "success" | "error";
+  variant?: "primary" | "secondary" | "info" | "success" | "error" | "white";
   size?: "small" | "medium" | "large";
   onClick?: () => void;
   href?: string;
@@ -34,6 +34,9 @@ const Button = ({
         onClick={(e) => {
           if (disabled) {
             e.preventDefault();
+          }
+          if (onClick) {
+            onClick();
           }
         }}
       >
