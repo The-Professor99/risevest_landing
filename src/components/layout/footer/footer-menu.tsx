@@ -18,6 +18,8 @@ export default function FooterMenu({ menuTitle, menuItems }: FooterMenuProps) {
                 href={item.link}
                 target={item.target}
                 className="p-none my-sm"
+                fontType="secondaryText"
+                variant="secondary"
               >
                 {item.name}
               </Button>

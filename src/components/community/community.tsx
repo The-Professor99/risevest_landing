@@ -30,7 +30,12 @@ export default function Community() {
             )}
           </Typography>
 
-          <Button onClick={() => {}} className="mb-sm ">
+          <Button
+            onClick={() => {}}
+            className="mb-sm px-lg py-md"
+            weight="bold"
+            variant="tertiary"
+          >
             Join our Community
           </Button>
         </div>

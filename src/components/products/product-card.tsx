@@ -64,7 +64,12 @@ export default function ProductCard({
             </Typography>
           </div>
 
-          <Button href={buttonLink} className="mt-12 mb-md">
+          <Button
+            href={buttonLink}
+            className="mt-12 mb-md"
+            weight="bold"
+            size="medium"
+          >
             {buttonText}
           </Button>
         </div>

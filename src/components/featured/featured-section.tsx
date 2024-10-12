@@ -8,7 +8,7 @@ import Container from "components/atoms/Container";
 import useDocumentDimensions from "lib/hooks";
 
 export default function FeaturedSection() {
-  const { width, height } = useDocumentDimensions();
+  const { width } = useDocumentDimensions();
 
   const featuredTablet = [
     {

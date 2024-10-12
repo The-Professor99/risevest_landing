@@ -36,7 +36,12 @@ export default function FeaturedCard({
         </Typography>
 
         {!mobileView && (
-          <Button href={buttonLink} className="mt-md">
+          <Button
+            href={buttonLink}
+            className="mt-md"
+            weight="semi-bold"
+            size="medium"
+          >
             {buttonText}
           </Button>
         )}
