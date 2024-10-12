@@ -12,16 +12,17 @@ const AppstoreButton = ({
   appName: string;
 }) => {
   return (
-    <Button className="appstore--button rounded-lg flex py-sm px-md align-center">
+    <Button
+      size="xsmall"
+      className="appstore--button rounded-lg flex py-sm px-md align-center"
+    >
       {icon}
 
-      <Typography weight="light" className="ml-sm">
+      <span className="text-holder ml-sm">
         Download on the
         <br />
-        <Typography variant="span" weight="bold">
-          {appName}
-        </Typography>
-      </Typography>
+        <span className="app-name">{appName}</span>
+      </span>
     </Button>
   );
 };

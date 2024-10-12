@@ -12,7 +12,7 @@ interface ContainerProps {
 const Container = ({
   children,
   className = "",
-  maxWidth = "lg",
+  maxWidth = "md",
   padding = "md",
   centerContent = false,
 }: ContainerProps) => {

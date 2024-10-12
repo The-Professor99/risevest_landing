@@ -1,0 +1,11 @@
+.appcard {
+  height: 270px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .content--container {
+    position: absolute;
+    bottom: 0%;
+  }
+}

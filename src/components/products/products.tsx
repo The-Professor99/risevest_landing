@@ -51,12 +51,23 @@ export default function Products() {
   ];
   return (
     <Container padding="none" centerContent>
-      <section className="center w-full">
-        <div>
-          <Typography variant="h2" size="large" weight="bold">
+      <section className="center w-full mt-lg">
+        <div className="pt-md">
+          <Typography
+            variant="h2"
+            size="xlarge"
+            weight="bold"
+            color="secondary"
+            scale
+            className="tracking-tight"
+          >
             Asset Classes
           </Typography>
-          <Typography weight="semi-bold" className="mt-sm mb-md">
+          <Typography
+            fontType="secondaryText"
+            color="secondary"
+            className="mt-sm mb-md"
+          >
             It’s your money, choose where you invest it
           </Typography>
         </div>

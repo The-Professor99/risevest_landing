@@ -1,0 +1,80 @@
+@keyframes move {
+  0% {
+    left: 6rem;
+  }
+  25% {
+    left: 10rem;
+  }
+  50% {
+    left: 6rem;
+  }
+  75% {
+    left: 3rem;
+  }
+  100% {
+    left: 0rem;
+  }
+}
+
+.hero {
+  .hero--text-container {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: #a0dde2;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      left: 6rem;
+
+      animation: move 5s linear 2s infinite alternate;
+    }
+  }
+  .hero--header {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: #a0dde2;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      top: -3rem;
+      right: -8rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #a0dde2;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      top: -2rem;
+    }
+  }
+  .phone--body {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: #a0dde2;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      bottom: -2rem;
+      right: -4rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: #a0dde2;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      bottom: 2rem;
+      left: -4rem;
+    }
+  }
+}

@@ -2,10 +2,14 @@
   justify-content: center;
   .appstore--button {
     background-color: black;
+    text-align: left;
 
-    .typography {
-      font-size: 10px;
-      text-align: left;
+    span {
+      color: #ffffff;
+      display: inline-block;
+    }
+    .app-name {
+      font-size: 13px;
     }
   }
   @media (min-width: 768px) {

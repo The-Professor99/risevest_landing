@@ -5,29 +5,39 @@ import Container from "components/atoms/Container";
 import useDocumentDimensions from "lib/hooks";
 
 export default function Community() {
-  const { width, height } = useDocumentDimensions();
+  const { width } = useDocumentDimensions();
 
   const mobileView = width < 768;
   return (
-    <Container centerContent>
-      <article className="w-full justify-between align-center md-d-flex">
+    <Container centerContent padding="none">
+      <article className="w-full justify-between align-center md-d-flex py-md pl-md pr-sm">
         <CommunityImages />
 
         <div className="md-w-half md-text-left">
-          <Typography variant="h2" weight="bold" className="mt-lg">
+          <Typography
+            variant="h2"
+            weight="bold"
+            size="xlarge"
+            color="secondary"
+            className="mt-lg tracking-tight"
+            scale
+          >
             Join The Rise Community
           </Typography>
 
-          <Typography className="my-md">
+          <Typography
+            className="my-md"
+            fontType="secondaryText"
+            color="secondary"
+          >
             If you want to go far, go together.{" "}
-            {!mobileView && (
-              <Typography variant="span">
+            {!mobileView &&
+              `
                 Our Telegram community surrounds you with others who can help
                 you along your financial journey with tips, support, advice and
                 learning. It's completely free and open to new and seasoned
                 investors.
-              </Typography>
-            )}
+            `}
           </Typography>
 
           <Button

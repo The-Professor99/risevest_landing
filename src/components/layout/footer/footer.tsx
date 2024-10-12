@@ -56,7 +56,12 @@ export default function Footer() {
         <FooterMenu
           menuItems={exploreItems}
           menuTitle={
-            <Typography variant="h3" weight="bold" className="mb-lg">
+            <Typography
+              variant="h3"
+              weight="bold"
+              color="secondary"
+              className="mb-lg"
+            >
               Explore
             </Typography>
           }
@@ -64,7 +69,12 @@ export default function Footer() {
         <FooterMenu
           menuItems={productItems}
           menuTitle={
-            <Typography variant="h3" weight="bold" className="mb-lg">
+            <Typography
+              variant="h3"
+              weight="bold"
+              color="secondary"
+              className="mb-lg"
+            >
               Products
             </Typography>
           }
@@ -72,7 +82,12 @@ export default function Footer() {
         <FooterMenu
           menuItems={contactItems}
           menuTitle={
-            <Typography variant="h3" weight="bold" className="mb-lg">
+            <Typography
+              variant="h3"
+              color="secondary"
+              weight="bold"
+              className="mb-lg"
+            >
               Contact Us
             </Typography>
           }

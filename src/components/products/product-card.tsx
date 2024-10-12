@@ -2,6 +2,7 @@ import Button from "components/atoms/Buttons";
 import Image from "components/atoms/Image";
 import Typography from "components/atoms/Typography";
 import "./product-card.scss";
+import { ArrowRight } from "components/atoms/Icons";
 
 interface ProductCardProps {
   title: string;
@@ -37,31 +38,35 @@ export default function ProductCard({
           <Image src={imgSrc} alt={imgAlt} className="rounded-full" />
         </div>
         <div className="p-sm">
-          <Typography
-            variant="h3"
-            weight="bold"
-            size="large"
-            className="product--title m-md"
-          >
-            {title}
-          </Typography>
-          <Typography
-            variant="p"
-            weight="light"
-            className="product--description my-md"
-          >
-            {description}
-          </Typography>
-          <div>
-            <Typography variant="strong" weight="light">
-              <Typography variant="span">Historical Returns: </Typography>{" "}
-              <Typography variant="em">{historicalReturns}</Typography>
+          <div className="product--text-container">
+            <Typography
+              variant="h3"
+              weight="bold"
+              size="medium"
+              className="product--title m-md"
+              color="tertiary"
+            >
+              {title}
             </Typography>
-            <br />
-            <Typography variant="strong" weight="light">
-              <Typography variant="span">Risk Level: </Typography>
-              <Typography variant="em">{riskLevel}</Typography>
+            <Typography
+              variant="p"
+              className="product--description my-md"
+              fontType="secondaryText"
+              color="tertiary"
+            >
+              {description}
             </Typography>
+            <div>
+              <Typography variant="strong">
+                <Typography variant="span">Historical Returns: </Typography>{" "}
+                <Typography variant="em">{historicalReturns}</Typography>
+              </Typography>
+              <br />
+              <Typography variant="strong">
+                <Typography variant="span">Risk Level: </Typography>
+                <Typography variant="em">{riskLevel}</Typography>
+              </Typography>
+            </div>
           </div>
 
           <Button
@@ -71,6 +76,7 @@ export default function ProductCard({
             size="medium"
           >
             {buttonText}
+            <ArrowRight className="ml-sm" />
           </Button>
         </div>
       </div>

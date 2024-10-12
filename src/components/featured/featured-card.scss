@@ -14,13 +14,17 @@
   }
 
   @media (min-width: 768px) {
+    max-height: 335px;
     .image--container::after {
       display: none;
+    }
+    .featured--text-container {
+      max-width: 45%;
     }
   }
 }
 
-.featured--section .featured:nth-child(even) {
+.featured--section .featured:nth-child(odd) {
   @media (min-width: 768px) {
     .image--container {
       order: 2;

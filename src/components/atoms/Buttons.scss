@@ -8,11 +8,11 @@
 
   &.primaryText {
     // Work Sans replaces Tomato Grotesk pending when Tomato Grotesk is available
-    font-family: "Work Sans", sans-serif;
+    font-family: var(--primary-font);
   }
 
   &.secondaryText {
-    font-family: "DM Sans", serif;
+    font-family: var(--secondary-font);
   }
 
   &.primary {

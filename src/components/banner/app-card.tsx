@@ -1,6 +1,6 @@
 import Button from "components/atoms/Buttons";
-import Image from "components/atoms/Image";
 import Typography from "components/atoms/Typography";
+import "./app-card.scss";
 
 interface AppCardProps {
   title: string;
@@ -8,7 +8,6 @@ interface AppCardProps {
   buttonLink: string;
   buttonText: string;
   imgSrc: string;
-  imgAlt: string;
 }
 
 export default function AppCard({
@@ -17,14 +16,23 @@ export default function AppCard({
   buttonLink,
   buttonText,
   imgSrc,
-  imgAlt,
 }: AppCardProps) {
   return (
-    <article>
-      <Image src={imgSrc} alt={imgAlt} />
-      <Typography variant="h3">{title}</Typography>
-      <Typography variant="p">{description}</Typography>
-      <Button href={buttonLink}>{buttonText}</Button>
+    <article
+      className="appcard p-md rounded-3xl my-md"
+      style={{ backgroundImage: `url(${imgSrc})` }}
+    >
+      <div className="content--container mb-md">
+        <Typography variant="h3" weight="bold" color="white">
+          {title}
+        </Typography>
+        <Typography variant="p" className="my-md " color="white">
+          {description}
+        </Typography>
+        <Button href={buttonLink} className="p-none">
+          {buttonText}
+        </Button>
+      </div>
     </article>
   );
 }
