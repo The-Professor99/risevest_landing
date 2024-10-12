@@ -1,7 +1,6 @@
 import lade from "assets/testimonials/lade.jpg";
 import TestimonialCard from "./testimonial-card";
 import React from "react";
-import Carousel from "components/atoms/Carousel";
 import useDocumentDimensions from "lib/hooks";
 
 export default function TestimonialCards() {

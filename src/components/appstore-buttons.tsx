@@ -1,5 +1,3 @@
-import PlaystoreLogo from "assets/playstore_logo.svg";
-import Typography from "./atoms/Typography";
 import Button from "./atoms/Buttons";
 import "./appstore-buttons.scss";
 import React from "react";

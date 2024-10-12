@@ -23,13 +23,18 @@ export default function AppCard({
       style={{ backgroundImage: `url(${imgSrc})` }}
     >
       <div className="content--container mb-md">
-        <Typography variant="h3" weight="bold" color="white">
+        <Typography variant="h3" weight="bold">
           {title}
         </Typography>
-        <Typography variant="p" className="my-md " color="white">
+        <Typography variant="p" className="my-md ">
           {description}
         </Typography>
-        <Button href={buttonLink} className="p-none">
+        <Button
+          href={buttonLink}
+          className="p-none"
+          weight="bold"
+          size="medium"
+        >
           {buttonText}
         </Button>
       </div>
