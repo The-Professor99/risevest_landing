@@ -1,32 +1,26 @@
-import phoneImage from "assets/phone.png";
-import AppleLogo from "assets/apple_logo.svg";
-import PlaystoreLogo from "assets/playstore_logo.svg";
+import Typography from "./atoms/Typography";
+import AppstoreButtons from "./appstore-buttons";
+import Container from "./atoms/Container";
+import PhoneBody from "./phone-body";
+import "./hero.scss";
 
 export default function Hero() {
   return (
-    <section>
-      <div>
-        <h2>Dollar investments that help you grow</h2>
-        <p>
-          We put your money in high quality assets that help you build wealth
-          and achieve your financial goals.
-        </p>
-        <div>
-          <button>
-            <span>
-              <img src={AppleLogo} alt="apple phone" />
-            </span>
-            Download on the App Store
-          </button>
-          <button>
-            <img src={PlaystoreLogo} alt="playstore" />
-            Download on the Google Play
-          </button>
+    <Container padding="none" centerContent>
+      <section className="hero align-center justify-between w-full justify-between pt-md md-d-flex md-text-left">
+        <div className="md-w-half">
+          <Typography variant="h1" color="primary" weight="bold">
+            Dollar investments that help you grow
+          </Typography>
+          <Typography className="my-md">
+            We put your money in high quality assets that help you build wealth
+            and achieve your financial goals.
+          </Typography>
+
+          <AppstoreButtons />
         </div>
-      </div>
-      <div>
-        <img src={phoneImage} alt="Risevest app display on a phone" />
-      </div>
-    </section>
+        <PhoneBody />
+      </section>
+    </Container>
   );
 }

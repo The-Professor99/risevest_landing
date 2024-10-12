@@ -28,7 +28,7 @@ const AppstoreButton = ({
 
 export default function AppstoreButtons() {
   return (
-    <div className="appstore--buttons flex mt-lg mb-lg gap-3 justify-between">
+    <div className="appstore--buttons flex mt-lg mb-lg gap-3 ">
       <AppstoreButton
         appName="App Store"
         icon={
@@ -39,7 +39,7 @@ export default function AppstoreButtons() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_1_1182)">
+            <g clipPath="url(#clip0_1_1182)">
               <path
                 d="M16.4989 0.5C15.2194 0.588499 13.7239 1.40749 12.8525 2.47399C12.0575 3.44148 11.4035 4.87847 11.6585 6.27497C13.0565 6.31847 14.5009 5.47997 15.3379 4.39548C16.1209 3.38598 16.7134 1.95799 16.4989 0.5Z"
                 fill="white"
@@ -72,7 +72,7 @@ export default function AppstoreButtons() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_1_1191)">
+            <g clipPath="url(#clip0_1_1191)">
               <path
                 d="M4.66964 0.877687C4.12289 0.52439 3.46617 0.417609 2.85019 0.563015L13.6751 11.388L17.1835 7.87959L4.66964 0.877687Z"
                 fill="white"
