@@ -1,16 +1,13 @@
-import phoneImage from "assets/phone.png";
-import AppleLogo from "assets/apple_logo.svg";
-import PlaystoreLogo from "assets/playstore_logo.svg";
 import Typography from "./atoms/Typography";
-import Button from "./atoms/Buttons";
-import Image from "./atoms/Image";
 import Container from "./atoms/Container";
 import "./download-app.scss";
+import AppstoreButtons from "./appstore-buttons";
+import PhoneBody from "./phone-body";
 
 export default function DownloadApp() {
   return (
     <Container centerContent>
-      <section className="download--app rounded-3xl p-sm">
+      <section className="download--app rounded-3xl p-sm pb-none">
         <div>
           <Typography variant="h2" color="primary" className="mt-lg mb-md">
             Download The Rise App
@@ -23,37 +20,10 @@ export default function DownloadApp() {
             Dollar investments that help you grow.
           </Typography>
 
-          <div className="flex mt-lg mb-lg gap-3 ">
-            <Button>
-              <div>
-                <img src={AppleLogo} alt="apple phone" />
-                <Typography weight="light">
-                  Download on the
-                  <br />
-                  <Typography variant="span" weight="bold">
-                    App Store
-                  </Typography>
-                </Typography>
-              </div>
-            </Button>
-
-            <Button>
-              <div>
-                <img src={PlaystoreLogo} alt="playstore" />
-
-                <Typography weight="light">
-                  Download on the
-                  <br />
-                  <Typography variant="span" weight="bold">
-                    Google Play
-                  </Typography>
-                </Typography>
-              </div>
-            </Button>
-          </div>
+          <AppstoreButtons />
         </div>
-        <div>
-          <Image src={phoneImage} alt="Risevest app display on a phone" />
+        <div className="h-32 overflow-hidden">
+          <PhoneBody />
         </div>
       </section>
     </Container>
