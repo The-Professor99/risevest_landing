@@ -1,0 +1,7 @@
+footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  @media (min-width: 768px) {
+    grid-template-columns: auto auto auto auto;
+  }
+}
