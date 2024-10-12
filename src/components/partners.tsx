@@ -46,9 +46,9 @@ export default function Partners() {
     },
   ];
   return (
-    <Container>
+    <Container centerContent className="my-md">
       <article>
-        <h2>We are supported by</h2>
+        <h2 className="left md-d-none">We are supported by</h2>
         <div className="flex h-16">
           {partners.map((partner) => (
             <React.Fragment key={partner.id}>

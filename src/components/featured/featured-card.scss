@@ -1,17 +1,4 @@
 .featured {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .text--container {
-    text-align: center;
-    padding: 1rem;
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-  }
-
   .image--container {
     position: relative;
     &::after {
@@ -23,6 +10,20 @@
       left: 15%;
       background: var(--primary-light);
       top: 75%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .image--container::after {
+      display: none;
+    }
+  }
+}
+
+.featured--section .featured:nth-child(even) {
+  @media (min-width: 768px) {
+    .image--container {
+      order: 2;
     }
   }
 }
