@@ -5,9 +5,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: 0.5rem 1rem;
   font-weight: 600;
   text-decoration: none;
+  background: none;
 
   &.primary {
     color: var(--primary-dark);
@@ -19,10 +19,6 @@
     color: #ffffff;
   }
   &.medium {
-    padding: 0.5rem 1rem;
     font-size: 1rem;
-  }
-  &.p-none {
-    padding: 0;
   }
 }
