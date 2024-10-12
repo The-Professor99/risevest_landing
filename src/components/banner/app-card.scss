@@ -4,8 +4,12 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  .content--container {
-    position: absolute;
-    bottom: 0%;
+  .appcard--content-container {
+    margin-top: 7rem;
+    .button,
+    .typography {
+      background-color: transparent;
+      color: white;
+    }
   }
 }

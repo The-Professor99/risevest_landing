@@ -2,7 +2,7 @@ import AppCards from "./app-cards";
 
 export default function AppOutlook() {
   return (
-    <div>
+    <div className="md-w-half">
       {/* <span>12:45</span>
       <div>
         <h2>Goals</h2>
