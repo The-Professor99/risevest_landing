@@ -1,28 +1,69 @@
 .button {
   display: inline-block;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
   text-decoration: none;
+  background: none;
+
+  &.primaryText {
+    // Work Sans replaces Tomato Grotesk pending when Tomato Grotesk is available
+    font-family: var(--primary-font);
+  }
+
+  &.secondaryText {
+    font-family: var(--secondary-font);
+  }
 
   &.primary {
     color: var(--primary-dark);
-    &:hover {
-      background-color: var(--primary-dark);
-    }
+    background-color: var(--background-main);
   }
-  &.white {
-    color: #ffffff;
+  &.inverted-primary {
+    background-color: var(--primary-dark);
+    color: var(--background-main);
+  }
+
+  &.secondary {
+    color: var(--default-dark);
+    background-color: var(--background-main);
+  }
+
+  &.inverted-secondary {
+    background-color: var(--default-dark);
+    color: var(--background-main);
+  }
+
+  &.tertiary {
+    color: var(--default-dark);
+    background-color: var(--primary-light);
+  }
+  &.xsmall {
+    font-size: 0.625rem;
+  }
+  &.small {
+    font-size: 0.8125rem;
   }
   &.medium {
-    padding: 0.5rem 1rem;
     font-size: 1rem;
   }
-  &.p-none {
-    padding: 0;
+  &.large {
+    font-size: 1.125rem;
+  }
+  &.regular {
+    font-weight: 400;
+  }
+  &.semi-bold {
+    font-weight: 500;
+  }
+  &.bold {
+    font-weight: 600;
+  }
+  &.bolder {
+    font-weight: 700;
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 }

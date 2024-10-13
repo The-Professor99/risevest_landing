@@ -1,32 +1,43 @@
-import phoneImage from "assets/phone.png";
-import AppleLogo from "assets/apple_logo.svg";
-import PlaystoreLogo from "assets/playstore_logo.svg";
+import Typography from "./atoms/Typography";
+import AppstoreButtons from "./appstore-buttons";
+import Container from "./atoms/Container";
+import PhoneBody from "./phone-body";
+import "./hero.scss";
+import useDocumentDimensions from "lib/hooks";
 
 export default function Hero() {
+  const { width } = useDocumentDimensions();
+  const mobileView = width < 768;
   return (
-    <section>
-      <div>
-        <h2>Dollar investments that help you grow</h2>
-        <p>
-          We put your money in high quality assets that help you build wealth
-          and achieve your financial goals.
-        </p>
-        <div>
-          <button>
-            <span>
-              <img src={AppleLogo} alt="apple phone" />
-            </span>
-            Download on the App Store
-          </button>
-          <button>
-            <img src={PlaystoreLogo} alt="playstore" />
-            Download on the Google Play
-          </button>
+    <Container padding="none" centerContent>
+      <section className="hero align-center justify-between w-full justify-between pt-md md-d-flex md-text-left md-pr-lg">
+        <div className="hero--text-container md-w-half p-sm">
+          <Typography
+            variant="h1"
+            color="primary"
+            weight="bold"
+            size="xl2"
+            scale
+            className="hero--header tracking-tighter"
+          >
+            <span>Dollar investments that help you grow</span>
+          </Typography>
+          <Typography
+            className="my-md px-sm md-px-none"
+            fontType="secondaryText"
+            weight="semi-bold"
+            color="tertiary"
+          >
+            {!mobileView
+              ? `We put your money in high quality assets that help you build wealth
+            and achieve your financial goals.`
+              : ` Your personal wealth manager. Get started with a minimum of $10 and`}
+          </Typography>
+
+          <AppstoreButtons />
         </div>
-      </div>
-      <div>
-        <img src={phoneImage} alt="Risevest app display on a phone" />
-      </div>
-    </section>
+        <PhoneBody />
+      </section>
+    </Container>
   );
 }

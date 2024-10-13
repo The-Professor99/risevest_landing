@@ -1,4 +1,4 @@
-import Navbar from "components/layout/header";
+import Navbar from "components/layout/header/header";
 import Hero from "components/hero";
 import Partners from "components/partners";
 import FeaturedSection from "components/featured/featured-section";

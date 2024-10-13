@@ -18,8 +18,10 @@ export default function TestimonialCard({
   imgAlt,
 }: TestimonialCardProps) {
   return (
-    <article className="testimonial m-md p-sm pt-md pb-md rounded-lg">
-      <Typography>{testimonial}</Typography>
+    <article className="testimonial m-md p-sm pt-md pb-md rounded-lg ">
+      <Typography fontType="secondaryText" color="tertiary">
+        {testimonial}
+      </Typography>
       <div className="flex flex-col align-center">
         <div className="w-8 h-8 my-md">
           <Image
@@ -28,10 +30,10 @@ export default function TestimonialCard({
             className="rounded-full object-cover w-full h-full"
           />
         </div>
-        <Typography variant="h3" weight="bold">
+        <Typography variant="h3" weight="bold" color="secondary">
           {name}
         </Typography>
-        <Typography variant="em" className="mt-sm">
+        <Typography variant="em" className="mt-sm" color="tertiary" scale>
           {tag}
         </Typography>
       </div>

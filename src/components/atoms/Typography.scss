@@ -2,20 +2,28 @@
   margin: 0;
   font-family: inherit;
 
-  &.small {
-    font-size: 0.875rem;
-  }
-
-  &.medium {
+  &.xsmall {
     font-size: 1rem;
   }
 
-  &.large {
-    font-size: 1.25rem;
+  &.small {
+    font-size: 1.125rem;
   }
 
-  &.light {
-    font-weight: 300;
+  &.medium {
+    font-size: 1.5rem;
+  }
+
+  &.large {
+    font-size: 2rem;
+  }
+
+  &.xlarge {
+    font-size: 2.5rem;
+  }
+
+  &.xl2 {
+    font-size: 3.5rem;
   }
 
   &.regular {
@@ -30,39 +38,50 @@
     font-weight: 600;
   }
 
-  &.bolder {
-    font-weight: 700;
+  &.primary {
+    color: var(--primary-dark);
   }
 
-  &.default {
+  &.secondary {
+    color: var(--default-dark);
+  }
+
+  &.tertiary {
     color: var(--default-main);
   }
-  &.primary {
+
+  &.accent {
     color: var(--primary-main);
   }
-  &.white {
-    color: #ffffff;
-  }
-}
 
-h1,
-h2,
-h3,
-h4 {
-  &.typography {
-    font-family: "Work Sans", sans-serif;
-    &.default {
-      color: var(--default-dark);
+  &.primaryText {
+    // Work Sans replaces Tomato Grotesk pending when Tomato Grotesk is available
+    font-family: var(--primary-font);
+  }
+
+  &.secondaryText {
+    font-family: var(--secondary-font);
+  }
+
+  @media (max-width: 768px) {
+    &.xsmall.scale {
+      font-size: 0.8125rem;
     }
-  }
-}
 
-strong {
-  &.typography {
-    span {
-      &.default {
-        color: var(--default-light);
-      }
+    &.small.scale {
+      font-size: 1rem;
+    }
+
+    &.large.scale {
+      font-size: 1.25rem;
+    }
+
+    &.xlarge.scale {
+      font-size: 2rem;
+    }
+
+    &.xl2.scale {
+      font-size: 2.5rem;
     }
   }
 }

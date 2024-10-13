@@ -5,9 +5,12 @@ import featured4 from "assets/featured_section/featured_4.png";
 import React from "react";
 import FeaturedCard from "./featured-card";
 import Container from "components/atoms/Container";
+import useDocumentDimensions from "lib/hooks";
 
 export default function FeaturedSection() {
-  const featured = [
+  const { width } = useDocumentDimensions();
+
+  const featuredTablet = [
     {
       id: 1,
       title: "Invest your money in dollars",
@@ -52,18 +55,56 @@ export default function FeaturedSection() {
     },
   ];
 
+  const featuredMobile = [
+    {
+      id: 1,
+      title: "Superior Performance",
+      description:
+        "Rise outperforms your other alternatives in two ways. The first is through our expert, algorithm driven investment approach that picks through over 3,000 data sets to find the perfect investment for you. ",
+      imgSrc: featured1,
+      buttonLink: "#",
+      buttonText: "Start Investing Now",
+      imgAlt: "A woman looking at a frame with 1 written on it",
+    },
+    {
+      id: 2,
+      title: "Personalization",
+      description:
+        "No two people are the same, and everyone’s financial goals are different. Rise understands this, which is why we tailor your journey to financial freedom to fit you.",
+
+      imgSrc: featured2,
+      buttonLink: "#",
+      buttonText: "Start Investing Now",
+      imgAlt: "A woman reading a book",
+    },
+    {
+      id: 3,
+      title: "Diversification",
+      description:
+        "Rise offers a choice of three asset classes: US equities, US real estate and fixed income assets to provide stability to your investments and protection from market declines. You can pick one asset class or",
+      imgSrc: featured3,
+      buttonLink: "#",
+      buttonText: "Start Investing Now",
+      imgAlt: "A woman in a spacesuit",
+    },
+  ];
+
+  const mobileView = width < 768;
+  const homepageFeatured = mobileView ? featuredMobile : featuredTablet;
+
   return (
-    <Container maxWidth="md" padding="sm" centerContent>
-      <section>
-        {featured.map((feature) => (
+    <Container padding="sm" centerContent>
+      <section className="featured--section">
+        {homepageFeatured.map((feature) => (
           <React.Fragment key={feature.id}>
             <FeaturedCard
               title={feature.title}
               description={feature.description}
-              buttonLink={feature.buttonLink}
-              buttonText={feature.buttonText}
               imgAlt={feature.imgAlt}
               imgSrc={feature.imgSrc}
+              buttonLink={feature?.buttonLink}
+              buttonText={feature?.buttonText}
+              mobileView={mobileView}
             />
           </React.Fragment>
         ))}

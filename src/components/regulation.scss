@@ -1,0 +1,72 @@
+.regulation--text-container {
+  max-width: 500px;
+
+  position: relative;
+  z-index: 2;
+}
+.regulation--container {
+  position: relative;
+  .container {
+    height: 372px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: #fff4f0;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    border-radius: 50%;
+    left: -8rem;
+    filter: blur(15px);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background: #f6e4f0;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    border-radius: 50%;
+    filter: blur(15px);
+    left: -8rem;
+  }
+
+  .regulation {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: #f6f2ff;
+      width: 200px;
+      height: 200px;
+      bottom: 0;
+      border-radius: 50%;
+      right: -8rem;
+      filter: blur(15px);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: #ecfefe;
+      width: 200px;
+      height: 200px;
+      top: 0;
+      border-radius: 50%;
+      filter: blur(15px);
+      right: -8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .regulation {
+      &::after {
+        right: 0;
+      }
+      &::before {
+        right: 0;
+      }
+    }
+  }
+}

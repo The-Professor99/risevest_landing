@@ -1,4 +1,8 @@
 import buildWealth from "assets/appcard/build_wealth.jpg";
+import saveKid from "assets/appcard/save_kid.jpg";
+// import planWedding from "assets/appcard/plan_wedding.png";
+import saveSchool from "assets/appcard/save_school.jpg";
+
 import React from "react";
 import AppCard from "./app-card";
 
@@ -12,44 +16,41 @@ export default function AppCards() {
       buttonLink: "#",
       buttonText: "Start Investing",
       imgSrc: buildWealth,
-      imgAlt: "Stacked Coins",
     },
     {
       id: 2,
-      title: "Build Wealth",
+      title: "Save for School",
       description:
-        "Invest for long-term goals like retirement with this plan. It’s your financial freedom partner.",
+        "In particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work.",
       buttonLink: "#",
       buttonText: "Start Investing",
-      imgSrc: buildWealth,
-      imgAlt: "Stacked Coins",
+      imgSrc: saveSchool,
     },
 
-    {
-      id: 3,
-      title: "Build Wealth",
-      description:
-        "Invest for long-term goals like retirement with this plan. It’s your financial freedom partner.",
-      buttonLink: "#",
-      buttonText: "Start Investing",
-      imgSrc: buildWealth,
-      imgAlt: "Stacked Coins",
-    },
+    // {
+    //   id: 3,
+    //   title: "Plan a Wedding",
+    //   description:
+    //     "In particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work.",
+    //   buttonLink: "#",
+    //   buttonText: "Start Investing",
+    //   imgSrc: planWedding,
+    // },
 
     {
       id: 4,
-      title: "Build Wealth",
+      title: "Save for Kid",
       description:
-        "Invest for long-term goals like retirement with this plan. It’s your financial freedom partner.",
+        "In particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work.",
       buttonLink: "#",
       buttonText: "Start Investing",
-      imgSrc: buildWealth,
-      imgAlt: "Stacked Coins",
+      imgSrc: saveKid,
     },
   ];
   return (
     <div>
-      {appCards.map((appCard) => (
+      {/* Showing 1 cause wasn't able to implement a carousel with time given */}
+      {appCards.slice(0, 1).map((appCard) => (
         <React.Fragment key={appCard.id}>
           <AppCard
             title={appCard.title}
@@ -57,7 +58,6 @@ export default function AppCards() {
             buttonLink={appCard.buttonLink}
             buttonText={appCard.buttonText}
             imgSrc={appCard.imgSrc}
-            imgAlt={appCard.imgAlt}
           />
         </React.Fragment>
       ))}

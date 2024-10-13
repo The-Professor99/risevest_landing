@@ -1,0 +1,18 @@
+.appstore--buttons {
+  justify-content: center;
+  .appstore--button {
+    background-color: black;
+    text-align: left;
+
+    span {
+      color: #ffffff;
+      display: inline-block;
+    }
+    .app-name {
+      font-size: 13px;
+    }
+  }
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}

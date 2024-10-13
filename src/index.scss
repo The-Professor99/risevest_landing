@@ -31,12 +31,14 @@ img {
 :root {
   --default-main: "#4A5050";
   --default-dark: "#2D2D2D";
-  --primary-light: #a0dde2cc;
+  --primary-light: #a0dde2;
   --primary-main: #40bbc3;
   --primary-dark: #07969e;
   --primary-lighter: #ecfefe;
   --background-main: #ffffff;
   --border-color: #919fb533;
+  --primary-font: "Work Sans", sans-serif;
+  --secondary-font: "DM Sans", serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

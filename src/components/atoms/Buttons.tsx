@@ -2,26 +2,35 @@ import "./Buttons.scss";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "info" | "success" | "error" | "white";
-  size?: "small" | "medium" | "large";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "inverted-primary"
+    | "inverted-secondary"
+    | "tertiary";
+  size?: "xsmall" | "small" | "medium" | "large";
+  weight?: "regular" | "semi-bold" | "bold" | "bolder";
   onClick?: () => void;
   href?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
   disabled?: boolean;
   className?: string;
+  fontType?: "primaryText" | "secondaryText";
 }
 
 const Button = ({
   children,
   variant = "primary",
   size = "medium",
+  weight = "regular",
+  fontType = "primaryText",
   onClick,
   href,
   target = "_self",
   disabled = false,
   className = "",
 }: ButtonProps) => {
-  const classes = `button ${variant} ${size}  ${className}`;
+  const classes = `button ${fontType} ${variant} ${weight} ${size}  ${className}`;
 
   if (href) {
     return (

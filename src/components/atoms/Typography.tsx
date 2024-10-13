@@ -3,22 +3,28 @@ import "./Typography.scss";
 
 interface TypographyProps {
   variant?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "strong" | "em";
-  size?: "small" | "medium" | "large";
-  weight?: "light" | "regular" | "semi-bold" | "bold" | "bolder";
-  color?: "primary" | "secondary" | "default" | "white";
+  size?: "xsmall" | "small" | "medium" | "large" | "xlarge" | "xl2";
+  weight?: "regular" | "semi-bold" | "bold";
+  color?: "primary" | "secondary" | "tertiary" | "accent";
   className?: string;
   children: React.ReactNode;
+  fontType?: "primaryText" | "secondaryText";
+  scale?: boolean;
 }
 
 const Typography = ({
   variant = "p",
-  size = "medium",
+  size = "xsmall",
   weight = "regular",
-  color = "default",
+  color = "primary",
+  fontType = "primaryText",
   className = "",
+  scale = false,
   children,
 }: TypographyProps) => {
-  const classes = `typography ${size} ${weight} ${color} ${className}`;
+  const classes = `typography ${fontType} ${size} ${weight} ${color} ${
+    scale ? "scale" : ""
+  } ${className}`;
 
   const Tag = variant;
 

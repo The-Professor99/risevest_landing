@@ -8,7 +8,7 @@ import "./community-image.scss";
 
 export default function CommunityImages() {
   return (
-    <div className="community--images flex flex-col align-center">
+    <div className="community--images flex flex-col align-center md-w-half">
       <div className="h-20 w-20">
         <Image
           src={member1}

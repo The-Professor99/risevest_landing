@@ -1,3 +1,8 @@
 .download--app {
   background-color: var(--primary-lighter);
+  @media (min-width: 768px) {
+    .appdownload--text-container {
+      width: 55%;
+    }
+  }
 }

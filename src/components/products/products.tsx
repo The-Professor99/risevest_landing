@@ -50,18 +50,29 @@ export default function Products() {
     },
   ];
   return (
-    <Container padding="lg" centerContent>
-      <section className="center">
-        <div>
-          <Typography variant="h2" size="large" weight="bold">
+    <Container padding="none" centerContent>
+      <section className="center w-full mt-lg">
+        <div className="pt-md">
+          <Typography
+            variant="h2"
+            size="xlarge"
+            weight="bold"
+            color="secondary"
+            scale
+            className="tracking-tight"
+          >
             Asset Classes
           </Typography>
-          <Typography weight="semi-bold">
+          <Typography
+            fontType="secondaryText"
+            color="secondary"
+            className="mt-sm mb-md"
+          >
             It’s your money, choose where you invest it
           </Typography>
         </div>
 
-        <div className="products--container">
+        <div className="products--container flex flex-col gap-16 align-center md-align-stretch justify-center md-flex-row lg-justify-between">
           {products.map((product) => (
             <React.Fragment key={product.id}>
               <ProductCard
